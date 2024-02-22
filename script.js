@@ -22,6 +22,7 @@ for (const btn of heroBtn) {
         display.innerText = newValue;
         return;
       }
+      return;
     } 
     // = btn click
     else if (e.target.innerText === "=") {
