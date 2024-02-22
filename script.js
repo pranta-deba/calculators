@@ -1,11 +1,20 @@
+// get all btn
 const heroBtn = document.getElementsByClassName("heroBtn");
 
+// apply for of loop in all btn
+// loop start
 for (const btn of heroBtn) {
+
+  // single click and add event function start
   btn.addEventListener("click", (e) => {
+
+    // C btn click
     if (e.target.innerText === "C") {
       document.getElementById("display").innerText = "";
       return;
-    } else if (e.target.innerText === "DEL") {
+    } 
+    // DEL btn click
+    else if (e.target.innerText === "DEL") {
       const display = document.getElementById("display");
       const value = display.innerText;
       if (value.length > 0) {
@@ -13,7 +22,9 @@ for (const btn of heroBtn) {
         display.innerText = newValue;
         return;
       }
-    } else if (e.target.innerText === "=") {
+    } 
+    // = btn click
+    else if (e.target.innerText === "=") {
       const display = document.getElementById("display");
       const value = display.innerText;
       const result = eval(value);
@@ -23,7 +34,12 @@ for (const btn of heroBtn) {
       display.innerText = result;
       return;
     }
+    // any number and operator btn click
     const display = document.getElementById("display");
     display.innerText += e.target.innerText;
+
   });
-}
+  // single click and add event function end
+
+};
+// loop end
